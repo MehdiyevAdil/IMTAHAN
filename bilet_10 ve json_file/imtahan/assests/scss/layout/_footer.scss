@@ -1,0 +1,57 @@
+#footer {
+    background-image: url('https://preview.colorlib.com/theme/robotics/img/footer-bg.jpg.webp');
+    height: 70vh;
+
+    .footerContent {
+        height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h1 {
+            color: #fff;
+            font-size: 1.2rem;
+        }
+
+        .footerIcons {
+            color: #fff;
+
+            i {
+                font-size: 20px;
+                padding: 15px;
+                background-color: black;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #footer {
+        background-image: url('https://preview.colorlib.com/theme/robotics/img/footer-bg.jpg.webp');
+        height: 70vh;
+
+        .footerContent {
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap:10px;
+
+            h1 {
+                color: #fff;
+                font-size: 1.2rem;
+            }
+
+            .footerIcons {
+                color: #fff;
+
+                i {
+                    font-size: 20px;
+                    padding: 15px;
+                    background-color: black;
+                }
+            }
+        }
+    }
+}

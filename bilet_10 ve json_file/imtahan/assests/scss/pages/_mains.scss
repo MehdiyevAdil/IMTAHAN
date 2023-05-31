@@ -1,0 +1,507 @@
+main {
+    width: 100%;
+    background-color: #8a90ff;
+}
+
+
+// section one started
+#sectionOne {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #8a90ff;
+    // height: 70vh;
+
+    .sectionOneText {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        h1 {
+            font-size: 3.3rem;
+            color: white;
+        }
+
+        h4 {
+            color: white;
+        }
+
+        button {
+            background: #fff;
+            color: #222 !important;
+            border: 1px solid transparent;
+            color: #fff;
+            width: 30%;
+            height: 40px;
+            border-radius: 6px;
+        }
+
+        button:hover {
+            background-color: #8a90ff;
+            color: #fff !important;
+        }
+    }
+
+}
+
+// section one end
+// section two started
+#sectionTwo {
+    // height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    background-color: #fff;
+
+    .sectionTwoText {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        h4 {
+            font-size: 1.6rem;
+            color: rgb(119, 119, 119);
+        }
+    }
+
+    .sectionTwoRoboImg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .imgSize {
+            width: 18%;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4%;
+
+            button {
+                background: #fff;
+                color: #222 !important;
+                border: 1px solid transparent;
+                color: #fff;
+                width: 50%;
+                height: 40px;
+                font-weight: 600px;
+                border-radius: 6px;
+            }
+
+            button:hover {
+                background-color: #8a90ff;
+                color: #fff !important;
+            }
+
+            h4 {
+                color: rgb(119, 119, 119);
+            }
+        }
+    }
+}
+
+// section two end
+
+// sectionTree started
+#sectionTree {
+    background-image: url('https://preview.colorlib.com/theme/robotics/img/feature-bg.jpg.webp');
+    padding: 5%;
+    .sectionTreeText{
+        h1{
+            font-size: 2.4rem;
+            color: #fff;
+        }
+        h4{
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color:#fff;
+        }
+    }
+
+    .mainContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        button {
+            width: 200px;
+            height: 40px;
+        }
+    }
+
+    #card {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 5%;
+        // background-color: aqua;
+
+        .sizeClass {
+            width: 20%;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #8a90ff;
+            margin: 1%;
+            border-radius: 6px;
+            gap: 10%;
+
+            p {
+                font-size: 1.5rem;
+                color: #fff;
+            }
+
+            a {
+                color: #fff;
+            }
+
+            button {
+                color: #fff;
+            }
+
+            :hover {
+                background-color: #8a90ff;
+                color: #fff !important;
+            }
+        }
+    }
+}
+
+// sectionTree end
+// section four started
+#sectionFour {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // height: 100vh;
+    gap: 10%;
+
+    .fourText {
+        h1 {
+            font-size: 3rem;
+        }
+
+        h4 {
+            color: rgb(119, 119, 119);
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .sectionFourContent {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 4%;
+    }
+
+    .fourImg {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+
+        button {
+            background-image: -webkit-linear-gradient(0deg, rgb(130, 143, 255) 0%, rgb(212, 150, 255) 100%);
+        }
+
+        button:hover {
+            background-color: #8a90ff;
+            color: #fff !important;
+        }
+
+        #one {
+            width: 20%;
+            height: 35px;
+            color: #fff;
+        }
+
+        #two {
+            width: 25%;
+            height: 35px;
+            color: #fff;
+        }
+
+        .fourInfo {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h4 {
+                color: rgb(119, 119, 119);
+                font-size: 1.2rem;
+                font-weight: 300;
+            }
+        }
+    }
+
+    // section four end
+
+}
+
+@media only screen and (max-width: 768px) {
+
+    // section one started
+    #sectionOne {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        background-color: #8a90ff;
+        height: 100vh;
+        gap: 10px;
+
+        .sectionOneText {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+
+            h1 {
+                font-size: 3.3rem;
+                color: white;
+            }
+
+            h4 {
+                color: white;
+            }
+
+            button {
+                background: #fff;
+                color: #222 !important;
+                border: 1px solid transparent;
+                color: #fff;
+                width: 30%;
+                height: 40px;
+                border-radius: 6px;
+            }
+
+            :hover {
+                background-color: #8a90ff;
+                color: #fff !important;
+            }
+        }
+
+    }
+
+    // section one end
+    // section two started
+    #sectionTwo {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5%;
+        background-color: #fff;
+
+        .sectionTwoText {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            h1 {
+                font-size: 3rem;
+            }
+
+            h4 {
+                font-size: 1.6rem;
+                color: rgb(119, 119, 119);
+            }
+        }
+
+        .sectionTwoRoboImg {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+
+            .imgSize {
+                width: 40%;
+                height: 70%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                button {
+                    background: #fff;
+                    color: #222 !important;
+                    border: 1px solid transparent;
+                    color: #fff;
+                    width: 50%;
+                    height: 40px;
+                    font-weight: 600px;
+                    border-radius: 6px;
+                }
+
+                button:hover {
+                    background-color: #8a90ff;
+                    color: #fff !important;
+                }
+
+                h4 {
+                    color: rgb(119, 119, 119);
+                    padding: 10px;
+                }
+            }
+        }
+    }
+
+    // section two end
+
+    // sectionTree started
+    #sectionTree {
+        background-image: url('https://preview.colorlib.com/theme/robotics/img/feature-bg.jpg.webp');
+        min-height: 100vh;
+
+        .mainContent {
+            display: flex;
+            flex-wrap: wrap !important;
+            align-items: center;
+            justify-content: center;
+
+            button {
+                width: 200px;
+                height: 40px;
+                background-color: #fff;
+                color: #8a90ff;
+                font-weight: 700;
+                border-radius: 6px;
+            }
+
+            button:hover {
+                background-color: #8a90ff;
+                color: #fff;
+            }
+        }
+
+        #card {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            // background-color: aqua;
+
+            .sizeClass {
+                width: 40%;
+                height: 300px;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                background-color: #8a90ff;
+                border-radius: 6px;
+                margin: 1%;
+                gap: 5%;
+
+                a {
+                    color: #fff;
+                }
+
+                p {
+                    font-size: 1.5rem;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    // sectionTree end
+    // section four started
+    #sectionFour {
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        // min-height: 100vh;
+        gap: 10%;
+    
+        .fourText {
+            h1 {
+                font-size: 3rem;
+            }
+    
+            h4 {
+                color: rgb(119, 119, 119);
+                font-size: 1.2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    
+        .sectionFourContent {
+           min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center
+        }
+    
+        .fourImg {
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+    
+            button {
+                background-image: -webkit-linear-gradient(0deg, rgb(130, 143, 255) 0%, rgb(212, 150, 255) 100%);
+            }
+    
+            button:hover {
+                background-color: #8a90ff;
+                color: #fff !important;
+            }
+    
+            #one {
+                width: 20%;
+                height: 35px;
+                color: #fff;
+            }
+    
+            #two {
+                width: 25%;
+                height: 35px;
+                color: #fff;
+            }
+    
+            .fourInfo {
+                h1 {
+                    font-size: 2rem;
+                }
+    
+                h4 {
+                    color: rgb(119, 119, 119);
+                    font-size: 1.2rem;
+                    font-weight: 300;
+                }
+            }
+        }
+    
+        // section four end
+    
+    }
+    // section four end
+}
