@@ -1,0 +1,3409 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+* li {
+  list-style: none;
+  cursor: pointer;
+}
+* a {
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.myContainer {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .myContainer {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 767px) and (min-width: 378px) {
+  .myContainer {
+    max-width: 368px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+footer {
+  font-family: "Lobster", cursive;
+}
+
+nav {
+  width: 100%;
+  background-color: #441215;
+  font-family: "Lobster", cursive;
+}
+nav #icon {
+  font-size: 30px;
+  color: #D1B24A;
+  cursor: pointer;
+  display: none;
+}
+nav .list {
+  overflow: hidden;
+  height: 0;
+}
+nav .navContent {
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #441215;
+  letter-spacing: 2.5px;
+}
+nav .navContent #navContentLogoImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3%;
+}
+nav .navContent #navContentLogoImg h1 {
+  color: #D1B24A;
+  font-size: 50px;
+  font-style: italic;
+  font-weight: 300;
+}
+nav .navContent .navContentMenu {
+  display: flex;
+  gap: 5%;
+  font-size: 18px;
+}
+nav .navContent .navContentMenu li,
+nav .navContent .navContentMenu a {
+  color: #D1B24A;
+}
+nav .navContent .navContentMenu .theatreList {
+  position: relative;
+}
+nav .navContent .navContentMenu .theatreList .tlist {
+  line-height: 27px;
+  letter-spacing: 0px !important;
+  padding: 60px 30px;
+  position: absolute;
+  top: 80%;
+  width: 210px;
+  height: 150px;
+  transition-delay: 2s;
+  background-color: #441215;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: none;
+}
+nav .navContent .navContentMenu .theatreList .tlist a {
+  padding-bottom: 10px;
+}
+nav .navContent .navContentMenu .theatreList:hover .tlist {
+  display: block;
+}
+nav .navContent .navContentMenu .kollektivList {
+  position: relative;
+}
+nav .navContent .navContentMenu .kollektivList .kList {
+  line-height: 27px;
+  letter-spacing: 0px !important;
+  position: absolute;
+  padding: 30px 30px;
+  top: 95%;
+  width: 180px;
+  height: 220px;
+  transition-delay: 2s;
+  background-color: #441215;
+  display: none;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+nav .navContent .navContentMenu .kollektivList .kList a {
+  padding-bottom: 10px;
+}
+nav .navContent .navContentMenu .kollektivList:hover .kList {
+  display: block;
+}
+nav .navContentIcons i {
+  color: #D1B24A !important;
+  font-size: 25px;
+  padding-left: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    width: 100%;
+    background-color: #441215;
+    font-family: "Lora", serif;
+    position: relative;
+  }
+  nav .theatreList {
+    position: relative;
+  }
+  nav .theatreList .tlist {
+    letter-spacing: 0px !important;
+    padding: 20px 30px;
+    position: absolute;
+    bottom: 10px;
+    left: 17%;
+    width: 200px;
+    height: 300px;
+    transition-delay: 3s;
+    background-color: #441215;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 2px;
+    display: none;
+  }
+  nav .theatreList .tlist a {
+    padding-bottom: 10px;
+  }
+  nav .theatreList:hover .tlist {
+    display: block;
+  }
+  nav .kollektivList {
+    position: relative;
+  }
+  nav .kollektivList .kList {
+    letter-spacing: 1px !important;
+    position: absolute;
+    padding: 60px 30px;
+    bottom: 10px;
+    left: 18%;
+    width: 200px;
+    height: 200px;
+    transition-delay: 2s;
+    background-color: #441215;
+    display: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  nav .kollektivList .kList a {
+    padding-bottom: 30px;
+  }
+  nav .kollektivList:hover .kList {
+    display: block;
+  }
+  nav #icon {
+    display: block !important;
+  }
+  nav .listOpen {
+    position: absolute;
+    display: block;
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+    gap: 6% !important;
+    background-color: #441215;
+    width: 100%;
+    height: 400px;
+    transition: height 2s;
+    z-index: 2;
+  }
+  nav .listOpen li, nav .listOpen a {
+    color: #D1B24A;
+  }
+  nav .listOpen i {
+    font-size: 20px;
+    padding-right: 25px;
+    color: #D1B24A !important;
+  }
+  nav .listOpen i:hover {
+    color: beige;
+  }
+  nav .navContent {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #441215;
+    letter-spacing: 2.5px;
+  }
+  nav .navContent #navContentLogoImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3%;
+  }
+  nav .navContent #navContentLogoImg h1 {
+    color: #D1B24A;
+    font-size: 30px;
+  }
+  nav .navContent .navContentMenu {
+    display: none !important;
+    display: flex;
+    gap: 5%;
+    font-size: 14px;
+  }
+  nav .navContent .navContentMenu a {
+    color: #D1B24A;
+  }
+  nav .navContent .navContentMenu .theatreList {
+    position: relative;
+  }
+  nav .navContent .navContentMenu .theatreList .tlist {
+    letter-spacing: 0px !important;
+    padding: 60px 30px;
+    position: absolute;
+    top: 80%;
+    width: 210px;
+    height: 150px;
+    transition-delay: 2s;
+    background-color: #441215;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: none;
+  }
+  nav .navContent .navContentMenu .theatreList .tlist a {
+    padding-bottom: 10px;
+  }
+  nav .navContent .navContentMenu .theatreList:hover .tlist {
+    display: block;
+  }
+  nav .navContent .navContentMenu .kollektivList {
+    position: relative;
+  }
+  nav .navContent .navContentMenu .kollektivList .kList {
+    letter-spacing: 0px !important;
+    position: absolute;
+    padding: 60px 30px;
+    top: 90%;
+    width: 300px;
+    height: 200px;
+    transition-delay: 2s;
+    background-color: #441215;
+    display: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  nav .navContent .navContentMenu .kollektivList .kList a {
+    padding-bottom: 10px;
+  }
+  nav .navContent .navContentMenu .kollektivList:hover .kList {
+    display: block;
+  }
+  nav .navContentIcons {
+    display: none;
+  }
+  nav .navContentIcons i {
+    color: #D1B24A;
+    font-size: 18px;
+    padding-left: 10px;
+  }
+}
+@media only screen and (max-width: 767px) and (min-width: 378px) {
+  nav {
+    width: 100%;
+    background-color: #441215;
+    font-family: "Lora", serif;
+    position: relative;
+  }
+  nav .theatreList {
+    position: relative;
+  }
+  nav .theatreList .tlist {
+    letter-spacing: 0px !important;
+    padding: 20px 30px;
+    position: absolute;
+    bottom: 10px;
+    left: 17%;
+    width: 200px;
+    height: 300px;
+    transition-delay: 3s;
+    background-color: #441215;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 2px;
+    display: none;
+  }
+  nav .theatreList .tlist a {
+    padding-bottom: 10px;
+  }
+  nav .theatreList:hover .tlist {
+    display: block;
+  }
+  nav .kollektivList {
+    position: relative;
+  }
+  nav .kollektivList .kList {
+    letter-spacing: 1px !important;
+    position: absolute;
+    padding: 60px 30px;
+    bottom: 10px;
+    left: 18%;
+    width: 200px;
+    height: 200px;
+    transition-delay: 2s;
+    background-color: #441215;
+    display: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  nav .kollektivList .kList a {
+    padding-bottom: 30px;
+  }
+  nav .kollektivList:hover .kList {
+    display: block;
+  }
+  nav #icon {
+    display: block !important;
+  }
+  nav .listOpen {
+    position: absolute;
+    display: block;
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+    gap: 6% !important;
+    background-color: #441215;
+    width: 100%;
+    height: 600px;
+    transition: 2s;
+    z-index: 2;
+  }
+  nav .listOpen li, nav .listOpen a {
+    color: #D1B24A;
+  }
+  nav .listOpen i {
+    font-size: 20px;
+    padding-right: 25px;
+    color: #D1B24A;
+  }
+  nav .navContent {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #441215;
+    letter-spacing: 2.5px;
+  }
+  nav .navContent #navContentLogoImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3%;
+  }
+  nav .navContent #navContentLogoImg h1 {
+    color: #D1B24A;
+    font-size: 20px;
+  }
+  nav .navContent .navContentMenu {
+    display: none !important;
+    display: flex;
+    gap: 5%;
+    font-size: 14px;
+  }
+  nav .navContent .navContentMenu a {
+    color: #D1B24A;
+  }
+  nav .navContent .navContentMenu .theatreList {
+    position: relative;
+  }
+  nav .navContent .navContentMenu .theatreList .tlist {
+    letter-spacing: 0px !important;
+    padding: 60px 30px;
+    position: absolute;
+    top: 80%;
+    width: 210px;
+    height: 150px;
+    transition-delay: 2s;
+    background-color: #441215;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: none;
+  }
+  nav .navContent .navContentMenu .theatreList .tlist a {
+    padding-bottom: 10px;
+  }
+  nav .navContent .navContentMenu .theatreList:hover .tlist {
+    display: block;
+  }
+  nav .navContent .navContentMenu .kollektivList {
+    position: relative;
+  }
+  nav .navContent .navContentMenu .kollektivList .kList {
+    letter-spacing: 0px !important;
+    position: absolute;
+    padding: 60px 30px;
+    top: 90%;
+    width: 300px;
+    height: 200px;
+    transition-delay: 2s;
+    background-color: #441215;
+    display: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  nav .navContent .navContentMenu .kollektivList .kList a {
+    padding-bottom: 10px;
+  }
+  nav .navContent .navContentMenu .kollektivList:hover .kList {
+    display: block;
+  }
+  nav .navContentIcons {
+    display: none;
+  }
+  nav .navContentIcons i {
+    color: #D1B24A;
+    font-size: 18px;
+    padding-left: 10px;
+  }
+}
+.fullContent {
+  margin-top: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2%;
+}
+.fullContent .fullSize {
+  font-family: "Arima", cursive;
+  font-style: italic;
+  color: #212529;
+  position: relative;
+  width: 25%;
+  height: 650px;
+  display: flex;
+  gap: 1%;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2%;
+  border-radius: 6px;
+  box-shadow: 0px -23px 25px 0px rgba(0, 0, 0, 0.17) inset, 0px -36px 30px 0px rgba(0, 0, 0, 0.15) inset, 0px -79px 40px 0px rgba(0, 0, 0, 0.1) inset, 0px 2px 1px rgba(0, 0, 0, 0.06), 0px 4px 2px rgba(0, 0, 0, 0.09), 0px 8px 4px rgba(0, 0, 0, 0.09), 0px 16px 8px rgba(0, 0, 0, 0.09);
+}
+.fullContent .fullSize i {
+  position: absolute;
+  right: 10%;
+  top: 3%;
+  font-size: 25px;
+  color: #fff;
+}
+.fullContent .fullSize .btnWishList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  color: #441215;
+  margin-bottom: 5px;
+  width: 100px;
+  height: 40px;
+  background-color: #fff;
+  border: 1px solid #441215;
+}
+.fullContent .fullSize .btnWishList:hover {
+  background-color: #441215;
+  color: #fff;
+}
+.fullContent .fullSize .fullImgSize {
+  width: 100%;
+  height: 500px;
+  background-position: content;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 768px) {
+  .fullContent {
+    margin-bottom: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2%;
+  }
+  .fullContent .fullSize {
+    font-family: "Arima", cursive;
+    font-style: italic;
+    color: #212529;
+    position: relative !important;
+    width: 45%;
+    height: 550px;
+    display: flex;
+    gap: 1%;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2%;
+    border-radius: 5px;
+  }
+  .fullContent .fullSize i {
+    position: absolute;
+    right: 10%;
+    top: 3%;
+    font-size: 25px;
+    color: #fff;
+  }
+  .fullContent .fullSize .fullImgSize {
+    width: 100%;
+    height: 450px;
+    background-position: content;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 10px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    transition: width 2s;
+  }
+  .fullContent .fullImgSize:hover {
+    width: 500px;
+  }
+}
+nav {
+  width: 100%;
+  background-color: #441215;
+  font-family: "Lobster", cursive;
+}
+nav #icon {
+  font-size: 30px;
+  color: #D1B24A;
+  cursor: pointer;
+  display: none;
+}
+nav .list {
+  overflow: hidden;
+  height: 0;
+}
+nav .homeNavContent {
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #441215;
+  letter-spacing: 2.5px;
+}
+nav .homeNavContent #navContentLogoImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3%;
+}
+nav .homeNavContent #navContentLogoImg h1 {
+  color: #D1B24A;
+  font-size: 50px;
+  font-style: italic;
+  font-weight: 300;
+}
+nav .homeNavContent .navContentMenu {
+  display: flex;
+  gap: 5%;
+  font-size: 18px;
+}
+nav .homeNavContent .navContentMenu li,
+nav .homeNavContent .navContentMenu a {
+  color: #D1B24A;
+}
+nav .homeNavContent .navContentMenu .theatreList {
+  position: relative;
+}
+nav .homeNavContent .navContentMenu .theatreList .tlist {
+  line-height: 27px;
+  letter-spacing: 0px !important;
+  padding: 60px 30px;
+  position: absolute;
+  top: 80%;
+  width: 210px;
+  height: 150px;
+  transition-delay: 2s;
+  background-color: #441215;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: none;
+}
+nav .homeNavContent .navContentMenu .theatreList .tlist a {
+  padding-bottom: 10px;
+}
+nav .homeNavContent .navContentMenu .theatreList:hover .tlist {
+  display: block;
+}
+nav .homeNavContent .navContentMenu .kollektivList {
+  position: relative;
+}
+nav .homeNavContent .navContentMenu .kollektivList .kList {
+  line-height: 27px;
+  letter-spacing: 0px !important;
+  position: absolute;
+  padding: 30px 30px;
+  top: 95%;
+  width: 180px;
+  height: 220px;
+  transition-delay: 2s;
+  background-color: #441215;
+  display: none;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+nav .homeNavContent .navContentMenu .kollektivList .kList a {
+  padding-bottom: 10px;
+}
+nav .homeNavContent .navContentMenu .kollektivList:hover .kList {
+  display: block;
+}
+nav .navContentIcons i {
+  color: #D1B24A;
+  font-size: 25px;
+  padding-left: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    width: 100%;
+    background-color: #441215;
+    font-family: "Lobster", cursive;
+    position: relative;
+  }
+  nav .theatreList {
+    position: relative;
+  }
+  nav .theatreList .tlist {
+    letter-spacing: 0px !important;
+    padding: 20px 30px;
+    position: absolute;
+    bottom: 10px;
+    left: 17%;
+    width: 200px;
+    height: 100px;
+    transition-delay: 3s;
+    background-color: #441215;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 2px;
+    display: none;
+  }
+  nav .theatreList .tlist a {
+    padding-bottom: 16px;
+  }
+  nav .theatreList:hover .tlist {
+    display: block;
+  }
+  nav .kollektivList {
+    position: relative;
+  }
+  nav .kollektivList .kList {
+    letter-spacing: 0.7px !important;
+    position: absolute;
+    padding: 60px 30px;
+    bottom: 10px;
+    left: 18%;
+    width: 200px;
+    height: 200px;
+    transition-delay: 2s;
+    background-color: #441215;
+    display: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  nav .kollektivList .kList li {
+    padding-bottom: 10px;
+  }
+  nav .kollektivList:hover .kList {
+    display: block;
+  }
+  nav #icon {
+    display: block !important;
+  }
+  nav .listOpen {
+    position: absolute;
+    letter-spacing: 1px;
+    display: block;
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+    gap: 6%;
+    background-color: #441215;
+    width: 100%;
+    height: 300px;
+    transition: 2s;
+  }
+  nav .listOpen a {
+    color: #D1B24A;
+  }
+  nav .listOpen i {
+    font-size: 20px;
+    padding-right: 25px;
+    color: #fff;
+  }
+  nav .homeNavContent {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #441215;
+    letter-spacing: 2.5px;
+  }
+  nav .homeNavContent #navContentLogoImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3%;
+  }
+  nav .homeNavContent #navContentLogoImg h1 {
+    color: #fff;
+    font-size: 30px;
+  }
+  nav .homeNavContent .navContentMenu {
+    display: none !important;
+    display: flex;
+    gap: 5%;
+    font-size: 14px;
+  }
+  nav .homeNavContent .navContentMenu a {
+    color: #fff;
+  }
+  nav .homeNavContent .navContentMenu .theatreList {
+    position: relative;
+  }
+  nav .homeNavContent .navContentMenu .theatreList .tlist {
+    letter-spacing: 0px !important;
+    padding: 60px 30px;
+    position: absolute;
+    top: 80%;
+    width: 210px;
+    height: 150px;
+    transition-delay: 2s;
+    background-color: #441215;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: none;
+  }
+  nav .homeNavContent .navContentMenu .theatreList .tlist li {
+    padding-bottom: 10px;
+  }
+  nav .homeNavContent .navContentMenu .theatreList:hover .tlist {
+    display: block;
+  }
+  nav .homeNavContent .navContentMenu .kollektivList {
+    position: relative;
+  }
+  nav .homeNavContent .navContentMenu .kollektivList .kList {
+    letter-spacing: 0px !important;
+    position: absolute;
+    padding: 60px 30px;
+    top: 90%;
+    width: 200px;
+    height: 200px;
+    transition-delay: 2s;
+    background-color: #441215;
+    display: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  nav .homeNavContent .navContentMenu .kollektivList .kList li {
+    padding-bottom: 10px;
+  }
+  nav .homeNavContent .navContentMenu .kollektivList:hover .kList {
+    display: block;
+  }
+  nav .navContentIcons {
+    display: none;
+  }
+  nav .navContentIcons i {
+    color: #fff;
+    font-size: 18px;
+    padding-left: 10px;
+  }
+}
+@media only screen and (max-width: 767px) and (min-width: 378px) {
+  nav {
+    width: 100%;
+    background-color: #441215;
+    font-family: "Lobster", cursive;
+    position: relative;
+  }
+  nav .theatreList {
+    position: relative;
+  }
+  nav .theatreList .tlist {
+    letter-spacing: 0px !important;
+    padding: 20px 30px;
+    position: absolute;
+    bottom: 10px;
+    left: 17%;
+    width: 200px;
+    height: 100px;
+    transition-delay: 3s;
+    background-color: #441215;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 2px;
+    display: none;
+  }
+  nav .theatreList .tlist a {
+    padding-bottom: 16px;
+  }
+  nav .theatreList:hover .tlist {
+    display: block;
+  }
+  nav .kollektivList {
+    position: relative;
+  }
+  nav .kollektivList .kList {
+    letter-spacing: 0.7px !important;
+    position: absolute;
+    padding: 60px 30px;
+    bottom: 10px;
+    left: 18%;
+    width: 200px;
+    height: 200px;
+    transition-delay: 2s;
+    background-color: #441215;
+    display: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  nav .kollektivList .kList li {
+    padding-bottom: 10px;
+  }
+  nav .kollektivList:hover .kList {
+    display: block;
+  }
+  nav #icon {
+    display: block !important;
+  }
+  nav .listOpen {
+    position: absolute;
+    letter-spacing: 1px;
+    display: block;
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+    gap: 6%;
+    background-color: #441215;
+    width: 100%;
+    height: 200px;
+    transition: 2s;
+  }
+  nav .listOpen a {
+    color: #D1B24A;
+    font-size: 15px;
+  }
+  nav .listOpen i {
+    font-size: 15px;
+    padding-right: 25px;
+    color: #fff;
+  }
+  nav .homeNavContent {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #441215;
+    letter-spacing: 2.5px;
+  }
+  nav .homeNavContent #navContentLogoImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3%;
+  }
+  nav .homeNavContent #navContentLogoImg h1 {
+    color: #D1B24A !important;
+    font-size: 25px !important;
+  }
+  nav .homeNavContent .navContentMenu {
+    display: none !important;
+    display: flex;
+    gap: 5%;
+    font-size: 14px;
+  }
+  nav .homeNavContent .navContentMenu a {
+    color: #fff;
+  }
+  nav .homeNavContent .navContentMenu .theatreList {
+    position: relative;
+  }
+  nav .homeNavContent .navContentMenu .theatreList .tlist {
+    letter-spacing: 0px !important;
+    padding: 60px 30px;
+    position: absolute;
+    top: 80%;
+    width: 210px;
+    height: 150px;
+    transition-delay: 2s;
+    background-color: #441215;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: none;
+  }
+  nav .homeNavContent .navContentMenu .theatreList .tlist li {
+    padding-bottom: 10px;
+  }
+  nav .homeNavContent .navContentMenu .theatreList:hover .tlist {
+    display: block;
+  }
+  nav .homeNavContent .navContentMenu .kollektivList {
+    position: relative;
+  }
+  nav .homeNavContent .navContentMenu .kollektivList .kList {
+    letter-spacing: 0px !important;
+    position: absolute;
+    padding: 60px 30px;
+    top: 90%;
+    width: 200px;
+    height: 200px;
+    transition-delay: 2s;
+    background-color: #441215;
+    display: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  nav .homeNavContent .navContentMenu .kollektivList .kList li {
+    padding-bottom: 10px;
+  }
+  nav .homeNavContent .navContentMenu .kollektivList:hover .kList {
+    display: block;
+  }
+  nav .navContentIcons {
+    display: none;
+  }
+  nav .navContentIcons i {
+    color: #fff;
+    font-size: 18px;
+    padding-left: 10px;
+  }
+}
+.sectionOneImg1 {
+  width: 100%;
+  height: 600px;
+  background-image: url("../img/acquisti-e-prenotazioni.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sectionOneImg2 {
+  width: 100%;
+  height: 600px;
+  background-image: url("../img/theatre2.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sectionOneImg2 h2 {
+  color: whitesmoke !important;
+  font-size: 60px;
+  z-index: 2;
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+}
+
+.sectionTreeImg1 {
+  width: 100%;
+  height: 600px;
+  background-image: url("../img/Theatre3.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sectionTreeImg2 {
+  width: 100%;
+  height: 600px;
+  background-image: url("../img/theatre4.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.carouselContainer {
+  width: 100%;
+  height: 800px;
+  margin: 0 auto;
+  position: relative;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.carouselImgs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 800px;
+  display: none;
+  padding: 20px;
+  text-align: center;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  font-size: 70px;
+  font-family: "Kaushan Script", cursive;
+  color: #fff;
+  animation: slide 40s infinite;
+}
+.carouselImgs a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+  height: 10%;
+  border-radius: 6px;
+  background-color: #fff;
+  font-size: 16px;
+  font-family: "Kaushan Script", cursive;
+  font-weight: 600;
+  color: #441215;
+  opacity: 0.7;
+}
+.carouselImgs button:hover {
+  background-color: #fff;
+}
+
+.prev,
+.next {
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+}
+
+.prev {
+  left: 10px;
+  font-size: 60px;
+  color: #fff;
+}
+
+.next {
+  right: 10px;
+  font-size: 60px;
+  color: #fff;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-7%);
+  }
+}
+.slide1 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slide2 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slide3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slide4 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sectionTwo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5% 0;
+}
+.sectionTwo .btnFull {
+  width: 200px;
+  height: 60px;
+  background-color: #441215;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.5s, opacity 0.5s;
+}
+.sectionTwo .btnFull:hover {
+  background-color: #fff;
+  color: #441215;
+  border: 1px solid #441215;
+  border-radius: 6px;
+}
+
+.sectionTwoContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2%;
+}
+.sectionTwoContent .cardSize {
+  font-family: "Arima", cursive;
+  font-style: italic;
+  color: #212529;
+  position: relative;
+  width: 25%;
+  height: 650px;
+  display: flex;
+  gap: 1%;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2%;
+  border-radius: 6px;
+  box-shadow: 0px -23px 25px 0px rgba(0, 0, 0, 0.17) inset, 0px -36px 30px 0px rgba(0, 0, 0, 0.15) inset, 0px -79px 40px 0px rgba(0, 0, 0, 0.1) inset, 0px 2px 1px rgba(0, 0, 0, 0.06), 0px 4px 2px rgba(0, 0, 0, 0.09), 0px 8px 4px rgba(0, 0, 0, 0.09), 0px 16px 8px rgba(0, 0, 0, 0.09);
+}
+.sectionTwoContent .cardSize i {
+  position: absolute;
+  right: 10%;
+  top: 3%;
+  font-size: 25px;
+  color: #fff;
+}
+.sectionTwoContent .cardSize .btnBasket {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  color: #441215;
+  margin-bottom: 5px;
+  width: 100px;
+  height: 40px;
+  background-color: #fff;
+  border: 1px solid #441215;
+}
+.sectionTwoContent .cardSize .btnBasket:hover {
+  background-color: #441215;
+  color: #fff;
+}
+.sectionTwoContent .cardSize .cardImgSize {
+  width: 100%;
+  height: 500px;
+  background-position: content;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.sectionTreeVideoControl {
+  position: relative;
+}
+.sectionTreeVideoControl #myVideo {
+  width: 100%;
+  height: 714px;
+}
+.sectionTreeVideoControl #muteButton {
+  position: absolute;
+  bottom: 10px;
+  z-index: 2;
+  right: 5%;
+  bottom: 5%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.sectionTreeVideoControl #muteButton i {
+  color: #441215;
+  font-size: 40px;
+}
+
+@media only screen and (max-width: 768px) {
+  .carouselImgs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    animation: fade 2s;
+    display: none;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: #fff;
+  }
+  .carouselImgs a {
+    width: 22%;
+    height: 7%;
+    border-radius: 6px;
+    background-color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    color: #441215;
+    opacity: 0.7;
+  }
+  .carouselImgs button:hover {
+    background-color: #fff;
+  }
+  .sectionTwo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5% 0;
+  }
+  .sectionTwo .btnFull {
+    width: 200px;
+    height: 60px;
+    background-color: #441215;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sectionTwo .btnFull:hover {
+    background-color: #fff;
+    color: #441215;
+    border: 1px solid #441215;
+    border-radius: 6px;
+  }
+  .sectionTwoContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2%;
+  }
+  .sectionTwoContent .cardSize {
+    font-family: "Arima", cursive;
+    font-style: italic;
+    color: #212529;
+    position: relative;
+    width: 60%;
+    height: 770px;
+    display: flex;
+    gap: 1%;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2%;
+    border-radius: 6px;
+    box-shadow: 0px -23px 25px 0px rgba(0, 0, 0, 0.17) inset, 0px -36px 30px 0px rgba(0, 0, 0, 0.15) inset, 0px -79px 40px 0px rgba(0, 0, 0, 0.1) inset, 0px 2px 1px rgba(0, 0, 0, 0.06), 0px 4px 2px rgba(0, 0, 0, 0.09), 0px 8px 4px rgba(0, 0, 0, 0.09), 0px 16px 8px rgba(0, 0, 0, 0.09);
+  }
+  .sectionTwoContent .cardSize i {
+    position: absolute;
+    right: 10%;
+    top: 3%;
+    font-size: 25px;
+    color: #fff;
+  }
+  .sectionTwoContent .cardSize .btnWishList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    color: #441215;
+    margin-bottom: 5px;
+    width: 100px;
+    height: 40px;
+    background-color: #fff;
+    border: 1px solid #441215;
+  }
+  .sectionTwoContent .cardSize .btnWishList:hover {
+    background-color: #441215;
+    color: #fff;
+  }
+  .sectionTwoContent .cardSize .cardImgSize {
+    width: 100%;
+    height: 650px;
+    background-position: content;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 15px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+  .sectionTreeVideoControl {
+    position: relative;
+  }
+  .sectionTreeVideoControl #myVideo {
+    width: 100%;
+    height: 279px;
+  }
+  .sectionTreeVideoControl #muteButton {
+    position: absolute;
+    bottom: 10px;
+    z-index: 2;
+    right: 7%;
+    bottom: 5%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  .sectionTreeVideoControl #muteButton i {
+    color: #441215;
+    font-size: 20px;
+  }
+  .sectionOneImg2 h2 {
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width: 767px) and (min-width: 378px) {
+  .sectionOneImg1 {
+    width: 100%;
+    height: 400px !important;
+    background-image: url("../img/acquisti-e-prenotazioni.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .sectionOneImg2 {
+    width: 100%;
+    height: 400px;
+    background-image: url("../img/theatre2.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sectionOneImg2 h2 {
+    color: #fff;
+    font-size: 20px;
+    z-index: 2;
+    font-family: "Dancing Script", cursive;
+    font-weight: 400;
+  }
+  .sectionTreeImg1 {
+    width: 100%;
+    height: 400px;
+    background-image: url("../img/Theatre3.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .sectionTreeImg2 {
+    width: 100%;
+    height: 400px;
+    background-image: url("../img/theatre4.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .carouselContainer {
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+  }
+  .carouselImgs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 400px;
+    display: none;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    font-size: 70px;
+    font-family: "Kaushan Script", cursive;
+    color: #fff;
+    animation: slide 40s infinite;
+  }
+  .carouselImgs a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    height: 10%;
+    border-radius: 6px;
+    background-color: #fff;
+    font-size: 16px;
+    font-family: "Kaushan Script", cursive;
+    font-weight: 600;
+    color: #441215;
+    opacity: 0.7;
+  }
+  .carouselImgs button:hover {
+    background-color: #fff;
+  }
+  .prev,
+  .next {
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+  }
+  .prev {
+    left: 10px;
+    font-size: 60px;
+    color: #fff;
+  }
+  .next {
+    right: 10px;
+    font-size: 60px;
+    color: #fff;
+  }
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-7%);
+    }
+  }
+  .slide1 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .slide2 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .slide3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .slide4 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .sectionTwo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5% 0;
+  }
+  .sectionTwo .btnFull {
+    width: 160px;
+    height: 40px;
+    background-color: #441215;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 0.5s, opacity 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .sectionTwo .btnFull:hover {
+    background-color: #fff;
+    color: #441215;
+    border: 1px solid #441215;
+    border-radius: 6px;
+  }
+  .sectionTwoContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+  .sectionTwoContent .cardSize {
+    font-family: "Arima", cursive;
+    font-style: italic;
+    color: #212529;
+    position: relative;
+    font-size: 10px;
+    width: 50%;
+    height: 350px;
+    display: flex;
+    gap: 1%;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2%;
+    border-radius: 6px;
+    box-shadow: 0px -23px 25px 0px rgba(0, 0, 0, 0.17) inset, 0px -36px 30px 0px rgba(0, 0, 0, 0.15) inset, 0px -79px 40px 0px rgba(0, 0, 0, 0.1) inset, 0px 2px 1px rgba(0, 0, 0, 0.06), 0px 4px 2px rgba(0, 0, 0, 0.09), 0px 8px 4px rgba(0, 0, 0, 0.09), 0px 16px 8px rgba(0, 0, 0, 0.09);
+  }
+  .sectionTwoContent .cardSize i {
+    position: absolute;
+    right: 10%;
+    top: 3%;
+    font-size: 25px;
+    color: #fff;
+  }
+  .sectionTwoContent .cardSize .btnBasket {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    color: #441215;
+    margin-bottom: 5px;
+    width: 100px;
+    height: 40px;
+    background-color: #fff;
+    border: 1px solid #441215;
+  }
+  .sectionTwoContent .cardSize .btnBasket:hover {
+    background-color: #441215;
+    color: #fff;
+  }
+  .sectionTwoContent .cardSize .cardImgSize {
+    width: 100%;
+    height: 350px;
+    background-position: content;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+  .sectionTreeVideoControl {
+    position: relative;
+  }
+  .sectionTreeVideoControl #myVideo {
+    width: 100%;
+    height: 146px;
+  }
+  .sectionTreeVideoControl #muteButton {
+    position: absolute;
+    bottom: 10px;
+    z-index: 2;
+    right: 13%;
+    bottom: 13%;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+  }
+  .sectionTreeVideoControl #muteButton i {
+    color: #441215;
+    font-size: 20px;
+  }
+}
+orchester.html main {
+  background-color: #441215;
+}
+
+.orchestraImg {
+  width: 100%;
+  height: 800px;
+  background-image: url("../img/orchestra1.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.orchestraImg2 {
+  width: 100%;
+  height: 600px;
+  background-image: url("../img/orchestra2.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.orchestraImg3 {
+  width: 100%;
+  height: 600px;
+  background-image: url("../img/orkestera3.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+}
+
+.orchestraText {
+  height: 550px;
+  padding: 3% 0;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+  color: #D1B24A;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.orchestraText h1 {
+  color: #D1B24A;
+  font-size: 60px;
+  font-family: "Kaushan Script", cursive;
+}
+
+@media only screen and (max-width: 768px) {
+  .orchestraText {
+    height: 550px;
+    padding: 3% 0;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    color: #D1B24A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .orchestraText h1 {
+    color: #D1B24A;
+    font-size: 50px;
+    font-family: "Kaushan Script", cursive;
+  }
+}
+@media only screen and (max-width: 767px) and (min-width: 378px) {
+  .orchestraText {
+    height: 850px;
+    padding: 3% 0;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    color: #D1B24A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .orchestraText h1 {
+    color: #D1B24A;
+    font-size: 50px;
+    font-family: "Kaushan Script", cursive;
+  }
+  .orchestraImg {
+    width: 100%;
+    height: 800px;
+    background-image: url("../img/orchestra1.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .orchestraImg2 {
+    width: 100%;
+    height: 700px;
+    background-image: url("../img/orchestra2.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .orchestraImg3 {
+    width: 100%;
+    height: 650px;
+    background-image: url("../img/orkestera3.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+  }
+}
+.formContent {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1%;
+}
+.formContent input, .formContent select, .formContent option {
+  width: 300px;
+  height: 40px;
+  padding-left: 5%;
+  font-size: 20px;
+}
+.formContent button {
+  width: 10%;
+  height: 30px;
+  color: antiquewhite;
+  background-color: black;
+}
+.formContent a {
+  font-size: 22px;
+  color: black;
+  font-style: italic;
+}
+
+.baletTruppa {
+  width: 100%;
+  padding: 20px 0;
+  background-image: url("../img/balerin.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Arima", cursive;
+  font-style: italic;
+  color: aliceblue;
+}
+.baletTruppa h1 {
+  color: #D1B24A;
+  font-size: 60px;
+  font-family: "Kaushan Script", cursive;
+  padding: 2% 0;
+}
+.baletTruppa .img2 {
+  opacity: 0.8;
+  margin: 5px;
+  border-radius: 6px;
+  width: 40%;
+  height: 400px;
+  float: left;
+  background-image: url("../img/operybaleta.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.baletTruppa .img1 {
+  opacity: 0.8;
+  margin: 5px;
+  border-radius: 6px;
+  float: right;
+  width: 40%;
+  height: 400px;
+  background-image: url("../img/baletopera4.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.img3 {
+  float: right;
+  width: 100%;
+  height: 600px !important;
+  background-image: url("../img/operabalet3.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 768px) {
+  .baletTruppa {
+    width: 100%;
+    padding: 20px 0;
+    background-image: url("../img/balerin.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Arima", cursive;
+    font-style: italic;
+    color: aliceblue;
+  }
+  .baletTruppa h1 {
+    color: #D1B24A;
+    font-size: 60px;
+    font-family: "Kaushan Script", cursive;
+    padding: 2% 0;
+  }
+  .baletTruppa .img2 {
+    opacity: 0.8;
+    padding: 5% 0;
+    border-radius: 6px;
+    width: 70%;
+    height: 400px;
+    float: left;
+    background-image: url("../img/operybaleta.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .baletTruppa .img1 {
+    opacity: 0.8;
+    padding: 5% 0;
+    border-radius: 6px;
+    float: right;
+    width: 70%;
+    height: 400px;
+    background-image: url("../img/baletopera4.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .img3 {
+    padding: 5% 0;
+    float: right;
+    width: 100%;
+    height: 600px;
+    background-image: url("../img/operabalet3.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@media only screen and (max-width: 766px) and (min-width: 378px) {
+  .baletTruppa {
+    width: 100%;
+    padding: 20px 0;
+    background-image: url("../img/balerin.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Arima", cursive;
+    font-style: italic;
+    color: aliceblue;
+  }
+  .baletTruppa h1 {
+    color: #D1B24A;
+    font-size: 60px;
+    font-family: "Kaushan Script", cursive;
+    padding: 2% 0;
+  }
+  .baletTruppa .img2 {
+    opacity: 0.8;
+    padding: 5% 0;
+    border-radius: 6px;
+    width: 70%;
+    height: 350px;
+    float: left;
+    background-image: url("../img/operybaleta.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .baletTruppa .img1 {
+    opacity: 0.8;
+    padding: 5% 0;
+    border-radius: 6px;
+    float: right;
+    width: 70%;
+    height: 350px;
+    background-image: url("../img/baletopera4.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .img3 {
+    padding: 5% 0;
+    float: right;
+    width: 100%;
+    height: 600px;
+    background-image: url("../img/operabalet3.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+.operaHalls {
+  background-image: url("../img/test2.jpg");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5% 0;
+}
+.operaHalls h1 {
+  color: #D1B24A;
+  font-size: 60px;
+  font-family: "Kaushan Script", cursive;
+  padding: 2% 0;
+}
+.operaHalls img {
+  max-width: 100%;
+  border-radius: 8px;
+  opacity: 0.7;
+}
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    color: #D1B24A;
+    font-size: 40px !important;
+    font-family: "Kaushan Script", cursive;
+    padding: 2% 0;
+  }
+}
+@media only screen and (max-width: 767px) and (min-width: 378px) {
+  h1 {
+    color: #D1B24A;
+    font-size: 30px;
+    font-family: "Kaushan Script", cursive;
+    padding: 2% 0;
+  }
+}
+.myNews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../img/news1.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.myNews .myNewsBasliq {
+  display: flex;
+  background-color: #D1B24A;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.myNews .myNewsBasliq h2 {
+  display: contents;
+  padding-left: 10px;
+  font-family: "Arima", cursive;
+  font-style: italic;
+  color: azure;
+  font-size: 20px;
+}
+.myNews h1 {
+  color: #D1B24A;
+  font-size: 60px;
+  font-family: "Kaushan Script", cursive;
+  margin: 2% 0;
+}
+
+.newsContent {
+  display: flex;
+  margin-bottom: 5%;
+  gap: 3%;
+  background-image: url("../img/news1.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.newsContent .newsSize {
+  transition: 0.4s ease-out;
+  position: relative;
+  width: 40%;
+  height: 400px;
+  display: block;
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.newsContent .newsSize h2 {
+  display: none;
+  position: absolute;
+  padding: 1%;
+  font-family: "Arima", cursive;
+  font-style: italic;
+  color: azure;
+  top: 45%;
+  z-index: 2;
+}
+.newsContent .newsSize:hover {
+  z-index: 2;
+  transform: translateY(15%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 450px;
+  width: 50%;
+}
+.newsContent .newsSize:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 20px;
+  z-index: 1;
+  color: azure;
+}
+.newsContent .newsSize:hover h2 {
+  width: 90%;
+  display: block;
+  color: #fff;
+  font-size: 20px;
+}
+
+@media only screen and (min-width: 378px) and (max-width: 767px) {
+  .myNews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4%;
+  }
+  .myNews h1 {
+    color: #D1B24A;
+    font-size: 40px;
+    font-family: "Kaushan Script", cursive;
+    margin: 2% 0;
+  }
+  .newsContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .newsContent .newsSize {
+    transition: 0.4s ease-out;
+    position: relative;
+    width: 100%;
+    height: 450px;
+    display: block;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .newsContent .newsSize h2 {
+    display: none;
+    position: absolute;
+    padding: 1%;
+    font-family: "Arima", cursive;
+    font-style: italic;
+    color: #212529;
+    top: 45%;
+  }
+  .newsContent .newsSize:hover {
+    z-index: 2;
+    transform: translateY(15%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    width: 100%;
+  }
+  .newsContent .newsSize:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 20px;
+    z-index: 1;
+    color: azure;
+  }
+  .newsContent .newsSize:hover h2 {
+    width: 90%;
+    display: block;
+    color: #fff;
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .myNews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .myNews h1 {
+    color: #D1B24A;
+    font-size: 40px;
+    font-family: "Kaushan Script", cursive;
+    margin: 2% 0;
+  }
+  .newsContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .newsContent .newsSize {
+    transition: 0.4s ease-out;
+    position: relative;
+    width: 60%;
+    height: 400px;
+    display: block;
+    border-radius: 8px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .newsContent .newsSize h2 {
+    display: none;
+    position: absolute;
+    padding: 1%;
+    font-family: "Arima", cursive;
+    font-style: italic;
+    color: #212529;
+    top: 45%;
+  }
+  .newsContent .newsSize:hover {
+    z-index: 2;
+    transform: translateY(15%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+    width: 50%;
+  }
+  .newsContent .newsSize:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 20px;
+    z-index: 1;
+    color: azure;
+  }
+  .newsContent .newsSize:hover h2 {
+    width: 90%;
+    display: block;
+    color: #fff;
+    font-size: 20px;
+  }
+}
+.formContent {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1%;
+}
+.formContent input, .formContent select, .formContent option {
+  width: 300px;
+  height: 40px;
+  padding-left: 5%;
+  font-size: 20px;
+}
+.formContent button {
+  width: 10%;
+  height: 30px;
+  color: antiquewhite;
+  background-color: black;
+}
+.formContent a {
+  font-size: 22px;
+  color: black;
+  font-style: italic;
+}
+
+.newsDetalis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1% 0;
+  gap: 5%;
+}
+
+.newsDetalisInfo {
+  padding: 1%;
+  font-family: "Arima", cursive;
+  font-style: italic;
+  color: #212529;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 100%;
+  font-size: 22px;
+  gap: 5%;
+}
+
+.newsSize {
+  box-shadow: 0px -23px 25px 0px rgba(0, 0, 0, 0.17) inset, 0px -36px 30px 0px rgba(0, 0, 0, 0.15) inset, 0px -79px 40px 0px rgba(0, 0, 0, 0.1) inset, 0px 2px 1px rgba(0, 0, 0, 0.06), 0px 4px 2px rgba(0, 0, 0, 0.09), 0px 8px 4px rgba(0, 0, 0, 0.09), 0px 16px 8px rgba(0, 0, 0, 0.09);
+  padding: 1%;
+  font-family: "Arima", cursive;
+  font-style: italic;
+  font-size: 15px;
+  color: #212529;
+  width: 40%;
+  height: 400px;
+  display: flex;
+  gap: 1%;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2%;
+  border-radius: 6px;
+}
+.newsSize .newsImgSize {
+  width: 100%;
+  height: 400px;
+  background-position: content;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5%;
+}
+
+.cardDetalis {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1% 0;
+}
+
+.cardDetalisInfo {
+  padding: 1%;
+  font-family: "Arima", cursive;
+  font-style: italic;
+  color: #212529;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 200px;
+  font-size: 22px;
+  gap: 5%;
+}
+.cardDetalisInfo .btnDetalis .btnPageDetalis {
+  width: 20%;
+  height: 40px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #441215;
+  border-radius: 6px;
+  background-color: #fff;
+  border: 1px solid #441215;
+}
+.cardDetalisInfo .btnDetalis .btnPageDetalis:hover {
+  background-color: #441215;
+  color: #fff;
+  border: 1px solid #fff;
+  transition: 1s;
+}
+
+.detalSize {
+  box-shadow: 0px -23px 25px 0px rgba(0, 0, 0, 0.17) inset, 0px -36px 30px 0px rgba(0, 0, 0, 0.15) inset, 0px -79px 40px 0px rgba(0, 0, 0, 0.1) inset, 0px 2px 1px rgba(0, 0, 0, 0.06), 0px 4px 2px rgba(0, 0, 0, 0.09), 0px 8px 4px rgba(0, 0, 0, 0.09), 0px 16px 8px rgba(0, 0, 0, 0.09);
+  padding: 1%;
+  font-family: "Arima", cursive;
+  font-style: italic;
+  color: #212529;
+  width: 28%;
+  height: 600px;
+  display: flex;
+  gap: 1%;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2%;
+  border-radius: 6px;
+}
+.detalSize .btnWishList {
+  box-shadow: 0px -23px 25px 0px rgba(0, 0, 0, 0.17) inset, 0px -36px 30px 0px rgba(0, 0, 0, 0.15) inset, 0px -79px 40px 0px rgba(0, 0, 0, 0.1) inset, 0px 2px 1px rgba(0, 0, 0, 0.06), 0px 4px 2px rgba(0, 0, 0, 0.09), 0px 8px 4px rgba(0, 0, 0, 0.09), 0px 16px 8px rgba(0, 0, 0, 0.09);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  color: #441215;
+  margin-bottom: 5px;
+  width: 100px;
+  height: 40px;
+  background-color: #fff;
+  border: 1px solid #441215;
+}
+.detalSize .btnWishList:hover {
+  background-color: #441215;
+  color: #fff;
+}
+.detalSize .detalImgSize {
+  width: 100%;
+  height: 500px;
+  background-position: content;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 768px) {
+  .cardDetalis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1% 0;
+  }
+  .cardDetalisInfo {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    font-size: 18px;
+    gap: 5%;
+  }
+  .cardDetalisInfo .btnPageDetalis {
+    width: 20%;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #441215;
+    border-radius: 6px;
+    background-color: #fff;
+    border: 1px solid #441215;
+  }
+  .cardDetalisInfo .btnPageDetalis:hover {
+    background-color: #441215;
+    color: #fff;
+    border: 1px solid #fff;
+    transition: 1s;
+  }
+  .detalSize {
+    padding: 1%;
+    font-family: "Arima", cursive;
+    font-style: italic;
+    color: #212529;
+    width: 50%;
+    height: 600px;
+    display: flex;
+    gap: 1%;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2%;
+    border-radius: 6px;
+  }
+  .detalSize .btnWishList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    color: #441215;
+    margin-bottom: 5px;
+    width: 100px;
+    height: 40px;
+    background-color: #fff;
+    border: 1px solid #441215;
+  }
+  .detalSize .btnWishList:hover {
+    background-color: #441215;
+    color: #fff;
+  }
+  .detalSize .detalImgSize {
+    width: 100%;
+    height: 500px;
+    background-position: content;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+.biletSecimi {
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url("../img/bilertesimi.jpeg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  margin: 0;
+}
+
+.movie-container {
+  margin: 20px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+}
+.movie-container h1 {
+  color: #D1B24A;
+  font-size: 60px;
+  font-family: "Kaushan Script", cursive;
+}
+
+.movie-container select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+  padding: 5px 15px;
+  margin-bottom: 40px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.container {
+  perspective: 1000px;
+  margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container h2 {
+  font-size: 30px;
+  color: #fff;
+  font-family: "Kaushan Script", cursive;
+}
+.container .text {
+  font-size: 35px;
+}
+
+.seat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #441215;
+  height: 35px;
+  width: 37px;
+  margin: 3px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border: 1px solid #D1B24A;
+}
+
+.selected {
+  background-color: #D1B24A;
+}
+
+.occupied {
+  background-color: #fff;
+}
+
+.seat:nth-of-type(2) {
+  margin-right: 18px;
+}
+
+.seat:nth-last-of-type(2) {
+  margin-left: 18px;
+}
+
+.seat:not(.occupied):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.showcase .seat:not(.occupied):hover {
+  cursor: default;
+  transform: scale(1);
+}
+
+.showcase {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #777;
+}
+
+.showcase li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.showcase li small {
+  margin-left: 2px;
+  font-family: "Kaushan Script", cursive;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.row2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.row3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.row4 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+}
+
+.screen {
+  background: #fff;
+  height: 70px;
+  width: 70%;
+  margin: 15px 0;
+  transform: rotateX(-45deg);
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+p.text {
+  margin: 40px 0;
+  font-size: 16px;
+  color: #fff;
+  font-family: "Kaushan Script", cursive;
+}
+p.text #count {
+  font-size: 20px;
+  color: #fff;
+}
+p.text #total {
+  font-size: 22px;
+  color: #fff;
+}
+
+p.text span {
+  color: #212529;
+  font-weight: 600;
+  box-sizing: content-box;
+}
+
+.credits a {
+  color: #212529;
+}
+
+#movie {
+  font-size: 16px;
+  color: #D1B24A;
+  font-family: "Kaushan Script", cursive;
+}
+
+@media only screen and (max-width: 768px) {
+  .container .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+  }
+  .container .row2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+  }
+  .container .row3 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+  }
+  .container .row4 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+  }
+  .container p.text {
+    margin: 40px 0;
+    font-size: 15px;
+    color: #fff;
+    font-family: "Kaushan Script", cursive;
+  }
+  .container p.text #count {
+    font-size: 17px;
+    color: #fff;
+  }
+  .container p.text #total {
+    font-size: 17px;
+    color: #fff;
+  }
+  .container p.text span {
+    color: #212529;
+    font-weight: 400;
+    box-sizing: content-box;
+  }
+}
+.theatreContent {
+  width: 100%;
+  background-image: url("../img/bacgraundtheatr.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Arima", cursive;
+  font-style: italic;
+  color: wheat;
+}
+.theatreContent img {
+  padding: 0 1%;
+  border-radius: 10px;
+  box-shadow: 0px -23px 25px 0px rgba(0, 0, 0, 0.17) inset, 0px -36px 30px 0px rgba(0, 0, 0, 0.15) inset, 0px -79px 40px 0px rgba(0, 0, 0, 0.1) inset, 0px 2px 1px rgba(0, 0, 0, 0.06), 0px 4px 2px rgba(0, 0, 0, 0.09), 0px 8px 4px rgba(0, 0, 0, 0.09), 0px 16px 8px rgba(0, 0, 0, 0.09);
+}
+.theatreContent h1 {
+  color: #D1B24A;
+  font-size: 60px;
+  font-family: "Kaushan Script", cursive;
+  padding: 2% 0;
+}
+
+.theatreText {
+  width: 100%;
+  background-image: url("");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.theatreText #theatrephotoOne {
+  float: right;
+}
+.theatreText #theatrephotoTwo {
+  float: left;
+  clear: both;
+  vertical-align: middle;
+}
+
+@media only screen and (max-width: 768px) {
+  .theatreContent {
+    width: 100%;
+    background-image: url("../img/bacgraundtheatr.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Arima", cursive;
+    font-style: italic;
+    color: wheat;
+    padding: 5% 0;
+  }
+  .theatreContent img {
+    width: 70%;
+    padding: 0 2%;
+    border-radius: 10px;
+    box-shadow: 0px -23px 25px 0px rgba(0, 0, 0, 0.17) inset, 0px -36px 30px 0px rgba(0, 0, 0, 0.15) inset, 0px -79px 40px 0px rgba(0, 0, 0, 0.1) inset, 0px 2px 1px rgba(0, 0, 0, 0.06), 0px 4px 2px rgba(0, 0, 0, 0.09), 0px 8px 4px rgba(0, 0, 0, 0.09), 0px 16px 8px rgba(0, 0, 0, 0.09);
+  }
+  .theatreContent h1 {
+    color: #D1B24A;
+    font-size: 40px;
+    font-family: "Kaushan Script", cursive;
+    padding-bottom: 2%;
+  }
+  .theatreText {
+    width: 100%;
+    background-image: url("");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .theatreText #theatrephotoOne {
+    float: right;
+  }
+  .theatreText #theatrephotoTwo {
+    float: left;
+    clear: both;
+    vertical-align: middle;
+  }
+}
+@media only screen and (max-width: 767px) and (min-width: 378px) {
+  .theatreContent {
+    width: 100%;
+    background-image: url("../img/bacgraundtheatr.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Arima", cursive;
+    font-style: italic;
+    color: wheat;
+    padding: 5% 0;
+  }
+  .theatreContent img {
+    width: 70%;
+    padding: 0 2%;
+    border-radius: 10px;
+    box-shadow: 0px -23px 25px 0px rgba(0, 0, 0, 0.17) inset, 0px -36px 30px 0px rgba(0, 0, 0, 0.15) inset, 0px -79px 40px 0px rgba(0, 0, 0, 0.1) inset, 0px 2px 1px rgba(0, 0, 0, 0.06), 0px 4px 2px rgba(0, 0, 0, 0.09), 0px 8px 4px rgba(0, 0, 0, 0.09), 0px 16px 8px rgba(0, 0, 0, 0.09);
+  }
+  .theatreContent h1 {
+    color: #D1B24A;
+    font-size: 20px !important;
+    font-family: "Kaushan Script", cursive;
+    padding-bottom: 2%;
+  }
+  .theatreText {
+    width: 100%;
+    background-image: url("");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .theatreText #theatrephotoOne {
+    float: right;
+  }
+  .theatreText #theatrephotoTwo {
+    float: left;
+    clear: both;
+    vertical-align: middle;
+  }
+}
+.repertuarContent {
+  width: 100%;
+  background-image: url("../img/repertuar2.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5% 0;
+}
+.repertuarContent h1 {
+  color: #D1B24A;
+  font-size: 60px;
+  font-family: "Kaushan Script", cursive;
+  padding: 2% 0;
+}
+.repertuarContent .repertuarSize {
+  width: 100%;
+  color: wheat;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.repertuarContent .repertuarSize h2 {
+  width: 45%;
+  font-family: "Arima", cursive;
+  font-style: italic;
+}
+.repertuarContent .repertuarSize h3 {
+  width: 20%;
+  font-family: "Arima", cursive;
+  font-style: italic;
+}
+
+@media only screen and (max-width: 768px) {
+  .repertuarContent {
+    width: 100%;
+    background-image: url("../img/repertuar2.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5% 0;
+  }
+  .repertuarContent h1 {
+    color: #D1B24A;
+    font-size: 60px;
+    font-family: "Kaushan Script", cursive;
+    padding: 2% 0;
+  }
+  .repertuarContent .repertuarSize {
+    width: 100%;
+    color: wheat;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .repertuarContent .repertuarSize h2 {
+    width: 45%;
+    font-family: "Arima", cursive;
+    font-style: italic;
+    font-size: 20px;
+  }
+  .repertuarContent .repertuarSize h3 {
+    width: 20%;
+    font-family: "Arima", cursive;
+    font-style: italic;
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 767px) and (min-width: 378px) {
+  .repertuarContent {
+    width: 100%;
+    background-image: url("../img/repertuar2.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5% 0;
+  }
+  .repertuarContent h1 {
+    color: #D1B24A;
+    font-size: 20px;
+    font-family: "Kaushan Script", cursive;
+    padding: 2% 0;
+  }
+  .repertuarContent .repertuarSize {
+    width: 100%;
+    color: wheat;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .repertuarContent .repertuarSize h2 {
+    width: 40%;
+    font-family: "Arima", cursive;
+    font-style: italic;
+    font-size: 15px;
+    text-transform: lowercase;
+    border-bottom: 1px solid #D1B24A;
+  }
+  .repertuarContent .repertuarSize h2::first-letter {
+    text-transform: uppercase;
+  }
+  .repertuarContent .repertuarSize h3 {
+    width: 35%;
+    font-family: "Arima", cursive;
+    font-style: italic;
+    font-size: 15px;
+    border-bottom: 1px solid #D1B24A;
+  }
+  .repertuarContent .repertuarSize h4 {
+    width: 20%;
+    font-family: "Arima", cursive;
+    font-style: italic;
+    font-size: 15px;
+    padding-left: 10px;
+    border-bottom: 1px solid #D1B24A;
+  }
+}
+#wishlist_container {
+  margin-top: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2%;
+}
+#wishlist_container .fullSize {
+  font-family: "Arima", cursive;
+  font-style: italic;
+  color: #212529;
+  position: relative;
+  width: 25%;
+  height: 650px;
+  display: flex;
+  gap: 1%;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2%;
+  border-radius: 6px;
+  box-shadow: 0px -23px 25px 0px rgba(0, 0, 0, 0.17) inset, 0px -36px 30px 0px rgba(0, 0, 0, 0.15) inset, 0px -79px 40px 0px rgba(0, 0, 0, 0.1) inset, 0px 2px 1px rgba(0, 0, 0, 0.06), 0px 4px 2px rgba(0, 0, 0, 0.09), 0px 8px 4px rgba(0, 0, 0, 0.09), 0px 16px 8px rgba(0, 0, 0, 0.09);
+}
+#wishlist_container .fullSize i {
+  position: absolute;
+  right: 10%;
+  top: 3%;
+  font-size: 25px;
+  color: #fff;
+}
+#wishlist_container .fullSize .wishlistButtonsDiv {
+  display: flex;
+  gap: 3%;
+}
+#wishlist_container .fullSize .wishlistBtnSize {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  color: #441215;
+  margin-bottom: 5px;
+  width: 100px;
+  height: 40px;
+  background-color: #fff;
+  border: 1px solid #441215;
+}
+#wishlist_container .fullSize .wishlistBtnSize:hover {
+  background-color: #441215;
+  color: #fff;
+}
+#wishlist_container .fullSize .fullImgSize {
+  width: 100%;
+  height: 500px;
+  background-position: content;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 768px) {
+  #wishlist_container {
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2%;
+  }
+  #wishlist_container .fullSize {
+    font-family: "Arima", cursive;
+    font-style: italic;
+    color: #212529;
+    position: relative;
+    width: 45%;
+    height: 550px;
+    display: flex;
+    gap: 1%;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2%;
+    border-radius: 6px;
+    box-shadow: 0px -23px 25px 0px rgba(0, 0, 0, 0.17) inset, 0px -36px 30px 0px rgba(0, 0, 0, 0.15) inset, 0px -79px 40px 0px rgba(0, 0, 0, 0.1) inset, 0px 2px 1px rgba(0, 0, 0, 0.06), 0px 4px 2px rgba(0, 0, 0, 0.09), 0px 8px 4px rgba(0, 0, 0, 0.09), 0px 16px 8px rgba(0, 0, 0, 0.09);
+  }
+  #wishlist_container .fullSize i {
+    position: absolute;
+    right: 10%;
+    top: 3%;
+    font-size: 25px;
+    color: #fff;
+  }
+  #wishlist_container .fullSize .wishlistButtonsDiv {
+    display: flex;
+    gap: 3%;
+  }
+  #wishlist_container .fullSize .wishlistBtnSize {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    color: #441215;
+    margin-bottom: 5px;
+    width: 100px;
+    height: 40px;
+    background-color: #fff;
+    border: 1px solid #441215;
+  }
+  #wishlist_container .fullSize .wishlistBtnSize:hover {
+    background-color: #441215;
+    color: #fff;
+  }
+  #wishlist_container .fullSize .fullImgSize {
+    width: 100%;
+    height: 500px;
+    background-position: content;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+.vokalImg {
+  width: 100%;
+  height: 900px;
+  background-image: url("../img/vokal.jpeg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.vokalImg2 {
+  width: 100%;
+  height: 700px;
+  background-image: url("../img/vokal2.jpeg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.vokalImg3 {
+  width: 100%;
+  height: 700px;
+  background-image: url("../img/vokal4.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+}
+
+.vokalText {
+  font-family: "Arima", cursive;
+  font-style: italic;
+  color: #212529;
+  height: 650px;
+  padding: 1% 0;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+  color: #D1B24A;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.vokalText h1 {
+  color: #D1B24A;
+  font-size: 60px;
+  font-family: "Kaushan Script", cursive;
+}
+
+@media only screen and (max-width: 768px) {
+  .vokalText {
+    height: 750px;
+    padding: 3% 0;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    color: #D1B24A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .vokalText h1 {
+    color: #D1B24A;
+    font-size: 50px;
+    font-family: "Kaushan Script", cursive;
+  }
+}
+@media only screen and (max-width: 767px) and (min-width: 378px) {
+  .vokalText {
+    height: 1255px !important;
+    padding: 3% 0;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    color: #D1B24A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .vokalText h1 {
+    color: #D1B24A;
+    font-size: 50px;
+    font-family: "Kaushan Script", cursive;
+  }
+  .vokalImg {
+    width: 100%;
+    height: 600px;
+    background-image: url("../img/vokal.jpeg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .vokalImg2 {
+    width: 100%;
+    height: 800px;
+    background-image: url("../img/vokal2.jpeg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .vokalImg3 {
+    width: auto;
+    height: 700px;
+    background-image: url("../img/vokal4.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+  }
+}
+footer {
+  width: 100%;
+  background-color: #441215;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  gap: 5%;
+}
+footer .footerLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+footer .footerLogo a h2 {
+  color: #D1B24A;
+  font-family: "Lobster", cursive;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  font-style: italic;
+  font-size: 30px;
+}
+footer .footerMenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Lobster", cursive;
+}
+footer .footerMenu a {
+  color: #D1B24A;
+  letter-spacing: 1px;
+}
+footer .footerContent {
+  background-color: #441215;
+  display: flex;
+  flex-direction: column;
+  gap: 30px !important;
+}
+footer .footerContent .footerInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .footerContent .footerInfo .footerAddrres {
+  font-size: 16px;
+  letter-spacing: 1.8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: "Lobster", cursive;
+}
+footer .footerContent .footerInfo .footerAddrres p {
+  color: #D1B24A;
+}
+footer .footerContent .footerInfo .footerSocial {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+footer .footerContent .footerInfo .footerSocial i {
+  color: #D1B24A;
+  font-size: 30px;
+}
+footer .footerContent .footerInfo .footerSocial:hover {
+  color: #E4D8AD;
+}
+
+@media only screen and (max-width: 768px) {
+  footer {
+    background-color: #441215;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    gap: 5%;
+  }
+  footer .footerLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  footer .footerLogo img {
+    width: 50px;
+  }
+  footer .footerLogo h2 {
+    color: #D1B24A;
+    font-family: "Tsukimi Rounded", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 40px;
+  }
+  footer .footerMenu {
+    display: flex;
+    width: 60%;
+    gap: 5px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  footer .footerMenu a {
+    color: #D1B24A;
+    padding-top: 10px;
+  }
+  footer .footerContent {
+    background-color: #441215;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+  footer .footerContent .footerInfo {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  footer .footerContent .footerInfo .footerAddrres {
+    display: flex;
+    flex-direction: row !important;
+    gap: 10px;
+  }
+  footer .footerContent .footerInfo .footerAddrres p {
+    color: #D1B24A;
+  }
+  footer .footerContent .footerInfo .footerSocial {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+  }
+  footer .footerContent .footerInfo .footerSocial i {
+    color: #D1B24A;
+    font-size: 30px;
+  }
+  footer .footerContent .footerInfo .footerSocial:hover {
+    color: #E4D8AD;
+  }
+}
+@media only screen and (max-width: 767px) and (min-width: 378px) {
+  footer {
+    background-color: #441215;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px;
+  }
+  footer .footerLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  footer .footerLogo img {
+    width: 50px;
+  }
+  footer .footerLogo h2 {
+    color: #D1B24A;
+    font-family: "Tsukimi Rounded", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 20px;
+  }
+  footer .footerMenu {
+    display: flex;
+    width: 80%;
+    gap: 5px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  footer .footerMenu a {
+    color: #D1B24A;
+    padding-top: 5px;
+    font-size: 12px;
+  }
+  footer .footerContent {
+    background-color: #441215;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  footer .footerContent .footerInfo {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  footer .footerContent .footerInfo .footerAddrres {
+    display: flex;
+    flex-direction: row !important;
+    gap: 5px;
+  }
+  footer .footerContent .footerInfo .footerAddrres p {
+    font-size: 10px;
+    color: #D1B24A;
+  }
+  footer .footerContent .footerInfo .footerSocial {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  footer .footerContent .footerInfo .footerSocial i {
+    color: #D1B24A;
+    font-size: 20px;
+  }
+  footer .footerContent .footerInfo .footerSocial:hover {
+    color: #E4D8AD;
+  }
+}
+.bediHeyet {
+  background-image: url("../img/bedii.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bediHeyet .bediHeyetTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2%;
+}
+.bediHeyet .bediHeyetTitle h1 {
+  color: #441215;
+  font-size: 60px;
+  font-family: "Kaushan Script", cursive;
+}
+.bediHeyet .bediHeyetContent {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 5% 0;
+}
+.bediHeyet .bediHeyetContent .bediHeyetCardSize {
+  width: 400px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 6px;
+  font-family: "Arima", cursive;
+  font-style: italic;
+  color: #212529;
+  box-shadow: inset 0 0 35px 5px rgba(0, 0, 0, 0.25), inset 0 2px 1px 1px rgba(255, 255, 255, 0.9), inset 0 -2px 1px rgba(0, 0, 0, 0.25);
+}
+.bediHeyet .bediHeyetContent .bediHeyetCardSize .bediHeyetImgSize {
+  width: 100%;
+  height: 400px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+@media only screen and (max-width: 768px) {
+  .bediHeyet .bediHeyetTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2%;
+  }
+  .bediHeyet .bediHeyetTitle h1 {
+    color: #441215;
+    font-size: 60px;
+    font-family: "Kaushan Script", cursive;
+  }
+  .bediHeyet .bediHeyetContent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5% 0;
+  }
+  .bediHeyet .bediHeyetContent .bediHeyetCardSize {
+    width: 330px;
+    height: 400px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 6px;
+  }
+  .bediHeyet .bediHeyetContent .bediHeyetCardSize .bediHeyetImgSize {
+    width: 100%;
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}/*# sourceMappingURL=main.css.map */
