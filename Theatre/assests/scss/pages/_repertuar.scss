@@ -1,0 +1,138 @@
+.repertuarContent{
+    width: 100%;
+    background-image: url('../img/repertuar2.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5% 0;
+    h1{
+        color:#D1B24A;
+        font-size: 60px;
+        font-family: 'Kaushan Script', cursive;
+        padding:2% 0;
+    }
+    .repertuarSize{
+        width: 100%;
+        color:wheat;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h2{
+            width: 45%;
+            font-family: 'Arima', cursive;
+            font-style: italic;
+        }
+        h3{
+            width: 20%;
+            font-family: 'Arima', cursive;
+            font-style: italic;
+
+        }
+    }
+
+}
+@media only screen and (max-width: 768px){
+    .repertuarContent{
+        width: 100%;
+        background-image: url('../img/repertuar2.jpg');
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 5% 0;
+        h1{
+            color:#D1B24A;
+            font-size: 60px;
+            font-family: 'Kaushan Script', cursive;
+            padding:2% 0;
+        }
+        .repertuarSize{
+            width: 100%;
+            color:wheat;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            h2{
+                width: 45%;
+                font-family: 'Arima', cursive;
+                font-style: italic;
+                font-size: 20px;
+            }
+            h3{
+                width: 20%;
+                font-family: 'Arima', cursive;
+                font-style: italic;
+                font-size: 15px;
+    
+            }
+        }
+    
+    }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 378px){
+    .repertuarContent{
+        width: 100%;
+        background-image: url('../img/repertuar2.jpg');
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 5% 0;
+        h1{
+            color:#D1B24A;
+            font-size: 20px;
+            font-family: 'Kaushan Script', cursive;
+            padding:2% 0;
+        }
+        .repertuarSize{
+            width: 100%;
+            color:wheat;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            h2{
+                width: 40%;
+                font-family: 'Arima', cursive;
+                font-style: italic;
+                font-size: 15px;
+                text-transform: lowercase;
+                border-bottom: 1px solid #D1B24A;
+            }
+            h2::first-letter {
+                text-transform: uppercase;
+              }
+            h3{
+                width: 35%;
+                font-family: 'Arima', cursive;
+                font-style: italic;
+                font-size: 15px;
+                border-bottom: 1px solid #D1B24A;
+            }
+            h4{
+                width: 20%;
+                font-family: 'Arima', cursive;
+                font-style: italic;
+                font-size: 15px;
+                padding-left: 10px;
+
+                border-bottom: 1px solid #D1B24A;
+                
+            }
+        }
+    
+    }
+}
