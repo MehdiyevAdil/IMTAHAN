@@ -1,0 +1,72 @@
+.basket_item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #D1B24A;
+  margin: 10px;
+  font-family: "Montserrat", sans-serif;
+  width: 7%;
+
+  h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #441215;
+    height: 37px;
+    width: 32px;
+    margin: 3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 2px solid #D1B24A;
+    color: #fff;
+    font-style: italic;
+    font-size: 12px;
+  }
+
+  p {
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-style: italic;
+  }
+
+  i {
+    color: #441215;
+  }
+}
+
+#basket_container {
+  font-family: 'Kaushan Script', cursive;
+
+  h1 {
+    font-style: italic;
+    color: #441215;
+
+  span{
+    display: flex;
+    h2 {
+      font-size: 25px;
+      color: #441215;
+    }
+  }
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    color: #441215;
+    margin-bottom: 5px;
+    width: 120px;
+    height: 40px;
+    background-color: #fff;
+    border: 1px solid #441215;
+  }
+
+  button:hover {
+    background-color: #441215;
+    color: #fff;
+  }
+}
