@@ -1,0 +1,227 @@
+
+.navbarAdmin{
+    background-color: black;
+}
+.navbarAdminContent{
+    color: #fff !important;
+    background-color: black;
+    font-family: 'Lobster', cursive;
+    height: 80px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .adminLogo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    h1{
+    color: #fff;
+
+    } 
+    }
+    .adminMenu{
+        display: flex;
+        gap:80px;
+        a{
+    color: #fff;
+
+        }
+    }
+
+}
+
+// bedi heyyet
+.bediHeyyetGet{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 10px;
+padding: 30px 0;
+h1{
+    color: #D1B24A;
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    font-style:italic;
+}
+.postFormsSquads{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    input{
+        width: 600px;
+        height: 40px;
+        padding-left: 60px;
+        font-size: 15px;
+    }
+    button{
+        background-color: black;
+        color:#fff;
+        font-size:15px;
+        height: 35px;
+        width: 70px;
+    }button:hover{
+        background-color:#D1B24A;
+    }
+}
+.bediHeyyetContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+
+    button{
+        background-color: black;
+        color:#fff;
+        font-size:15px;
+        height: 35px;
+        width: 70px;
+        margin-bottom: 10px;
+        margin-left: 44%
+    }button:hover{
+        background-color:#D1B24A;
+    }
+    .bediHeyyetCard{
+        padding-bottom:10px;
+        width:100%;
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+}
+}
+#bediHeyyetCard{
+    padding:10px 0;
+    .sizeClassSquads{
+        width:600px;
+        height:70px;
+        border:1px solid black;
+        padding-left: 60px;
+        font-style: italic;
+        font-size: 16px;
+        margin-bottom: 10px;
+        a{
+            color: #D1B24A;
+        }a:hover{
+            color:#441215;
+        }
+        }
+}
+
+// tamaslar full
+.adminSectionOne{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+   padding: 50px 0;
+   h1{
+    color: #D1B24A;
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    font-style:italic;
+   }
+}
+.postForms{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    input{
+        width: 600px;
+        height: 40px;
+        padding-left: 60px;
+        font-size: 15px;
+    }
+    button{
+        background-color: black;
+        color:#fff;
+        font-size:15px;
+        height: 35px;
+        width: 70px;
+    }button:hover{
+        background-color:#D1B24A;
+    }
+}
+#loadMoreBtn{
+    background-color: black;
+    color:#fff;
+    font-size:15px;
+    height: 35px;
+    width: 100px;
+}
+#card{
+    padding:10px 0;
+    .sizeClassTamasa{
+        width:600px;
+        height:70px;
+        border:1px solid black;
+        padding-left: 60px;
+        font-style: italic;
+        font-size: 16px;
+        margin-bottom: 10px;
+        a{
+            color: #D1B24A;
+        }a:hover{
+            color:#441215;
+        }
+        }
+}
+
+// media
+.adminSectionTwo{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+   padding: 50px 0;
+   h1{
+    color: #D1B24A;
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    font-style:italic;
+   }
+.postFormsMedia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    input{
+        width: 600px;
+        height: 40px;
+        padding-left: 60px;
+        font-size: 15px;
+    }
+    button{
+        background-color: black;
+        color:#fff;
+        font-size:15px;
+        height: 35px;
+        width: 70px;
+    }button:hover{
+        background-color:#D1B24A;
+    }
+}
+}
+#card{
+    padding:10px 0;
+    .sizeClassMedia{
+        width:600px;
+        height:90px;
+        border:1px solid black;
+        padding-left: 60px;
+        font-style: italic;
+        font-size: 16px;
+        margin-bottom: 10px;
+        a{
+            color: #D1B24A;
+        }a:hover{
+            color:#441215;
+        }
+        }
+}
