@@ -1,0 +1,108 @@
+
+.navbarAdmin{
+    background-color: black;
+}
+.navbarAdminContent{
+    color: #fff !important;
+    background-color: black;
+    font-family: 'Lobster', cursive;
+    height: 80px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .adminLogo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    h1{
+    color: #fff;
+
+    } 
+    }
+    .adminMenu{
+        display: flex;
+        gap:80px;
+        a{
+    color: #fff;
+
+        }
+    }
+
+}
+
+// bedi heyyet
+.bediHeyyetGet{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 10px;
+padding: 30px 0;
+h1{
+    color: #D1B24A;
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    font-style:italic;
+}
+.postFormsSquads{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    input{
+        width: 600px;
+        height: 40px;
+        padding-left: 60px;
+        font-size: 15px;
+    }
+    button{
+        background-color: black;
+        color:#fff;
+        font-size:15px;
+        height: 35px;
+        width: 70px;
+    }button:hover{
+        background-color:#D1B24A;
+    }
+}
+.bediHeyyetContent {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+
+    button{
+        background-color: black;
+        color:#fff;
+        font-size:15px;
+        height: 35px;
+        width: 70px;
+    }button:hover{
+        background-color:#D1B24A;
+    }
+    .bediHeyyetCard{
+        padding-bottom:10px;
+        width:100%;
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+}
+.sizeClassSquads{
+    width:600px;
+    height:70px;
+    border:1px solid black;
+    padding-left: 60px;
+    font-style: italic;
+    font-size: 16px;
+    margin-bottom: 10px;
+    a{
+        color: #D1B24A;
+    }a:hover{
+        color:#441215;
+    }
+    }
+}

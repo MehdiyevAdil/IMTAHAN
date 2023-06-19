@@ -1,0 +1,48 @@
+
+.loginForms{
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+.formContent{
+    background-image: url("../img/theatre4.jpg");
+    background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+    height: 540px;
+    width:40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:1%;
+    border:1px solid #D1B24A;
+    border-radius: 8px;
+    input,select,option{
+        width: 60%;
+        height: 45px;
+        padding-left: 5%;
+        font-size: 18px;
+        font-style: italic;
+
+    }
+    button{
+        width: 20%;
+        height: 30px;
+        color: antiquewhite;
+        background-color: #441215;;
+        font-size: 18px;
+        font-style: italic;
+
+    }button:hover{
+        background-color: #D1B24A;;
+    }
+    h1,a{
+        font-size: 24px;
+        font-weight: 700;
+        color: #fff;
+        font-style: italic;
+    }
+}
+}
