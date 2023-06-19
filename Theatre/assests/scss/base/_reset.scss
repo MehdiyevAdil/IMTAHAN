@@ -1,0 +1,41 @@
+
+* {
+    li{
+        list-style: none;
+        cursor: pointer;
+    }
+    a{
+        text-decoration: none !important;
+        cursor: pointer;
+    }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+button,i{
+    border: none;
+    cursor: pointer;
+}
+.myContainer{
+    max-width: 1400px;
+    width: 100%;
+    margin:0 auto;
+}
+@media only screen and (max-width: 768px) {
+    .myContainer{
+        max-width: 700px;
+        width: 100%;
+        margin:0 auto;
+    }
+}
+@media only screen and (max-width: 378px){
+    .myContainer{
+        max-width: 360px;
+        width: 100%;
+        margin:0 auto;
+    }
+}
+footer{
+    font-family: 'Lobster', cursive;
+}
